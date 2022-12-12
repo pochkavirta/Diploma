@@ -34,6 +34,7 @@ CREATE TABLE products
     description VARCHAR NOT NULL,
     price       INTEGER NOT NULL,
     ranking     INTEGER NOT NULL,
+    is_service  BOOLEAN,
     photoURL    VARCHAR,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
