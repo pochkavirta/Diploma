@@ -1,9 +1,9 @@
 DELETE
 FROM user_roles;
 DELETE
-FROM feed_types;
+FROM products_category;
 DELETE
-FROM feed;
+FROM products;
 DELETE
 FROM users;
 ALTER SEQUENCE global_seq RESTART WITH 100000;
@@ -17,7 +17,7 @@ VALUES ('ROLE_USER', 100000),
        ('ROLE_ADMIN', 100001),
        ('ROLE_USER', 100001);
 
-INSERT INTO feed (user_id, name,  description, price, ranking, photourl)
+INSERT INTO products (user_id, name,  description, price, ranking, photourl)
 VALUES (100000, 'Kronenbourg 1664', 'Пшеничное пиво', 70, 5, 'Kronebourg.png'),
        (100000, 'Guinness', 'Темный  стаут', 130, 2, 'Guinness.png'),
        (100000, 'Эль Мохнатый Шмель', 'Эль светный нефильтрованный', 40, 3, 'elMokhnatyiShmel.png'),
@@ -25,10 +25,10 @@ VALUES (100000, 'Kronenbourg 1664', 'Пшеничное пиво', 70, 5, 'Krone
        (100001, 'Hoegaarden грейпфрут', 'Пшеничное пиво', 70, 4, 'hoegaarden2.png'),
        (100001, 'Lefebvre Belgian Kriek', 'Красное вишневое', 180, 5, 'LefebvreBelgianKriek.png');
 
-INSERT INTO feed_types(type, feed_id)
-VALUES ('TYPE_BEER', 100002),
-       ('TYPE_BEER', 100003),
-       ('TYPE_BEER', 100004),
-       ('TYPE_BEER', 100005),
-       ('TYPE_BEER', 100006),
-       ('TYPE_BEER', 100007);
+INSERT INTO products_category(category, products_id)
+VALUES ('CATEGORY_BEER', 100002),
+       ('CATEGORY_BEER', 100003),
+       ('CATEGORY_BEER', 100004),
+       ('CATEGORY_BEER', 100005),
+       ('CATEGORY_BEER', 100006),
+       ('CATEGORY_BEER', 100007);
