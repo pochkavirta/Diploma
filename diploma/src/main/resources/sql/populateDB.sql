@@ -17,7 +17,7 @@ VALUES ('ROLE_USER', 100000),
        ('ROLE_ADMIN', 100001),
        ('ROLE_USER', 100001);
 
-INSERT INTO products (user_id, name,  description, price, ranking, photourl)
+INSERT INTO products (user_id, name,  description, price, ranking, is_service, photourl)
 VALUES (100000, 'Kronenbourg 1664', 'Пшеничное пиво', 70, 5, 'Kronebourg.png'),
        (100000, 'Guinness', 'Темный  стаут', 130, 2, 'Guinness.png'),
        (100000, 'Эль Мохнатый Шмель', 'Эль светный нефильтрованный', 40, 3, 'elMokhnatyiShmel.png'),
