@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class RootController {
+    //TODO для логина добавить отдельный user контроллер в новой папке, по аналогии с JspFeedController
 
     @GetMapping("/")
     public String root() {
