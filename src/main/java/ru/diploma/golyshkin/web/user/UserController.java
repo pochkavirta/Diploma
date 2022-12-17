@@ -11,6 +11,6 @@ public class UserController {
     @GetMapping("/login")
     public String login() {
         System.out.println("============= 2===================");
-        return "userLogin";
+        return "user/userLogin";
     }
 }

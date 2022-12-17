@@ -1,0 +1,41 @@
+.product-page {
+    display: inline;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+}
+.product-page {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.product-page ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.product-page li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+.product-page li a:hover,
+.product-page .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.product-page .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
