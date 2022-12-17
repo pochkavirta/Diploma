@@ -20,6 +20,7 @@
         <spring-data-jpa.version>2.1.2.RELEASE</spring-data-jpa.version>
         <jackson-json.version>2.9.8</jackson-json.version>
         <tomcat.version>9.0.14</tomcat.version>
+        <lombok.version>1.18.24</lombok.version>
 
         <!-- Logging -->
         <logback.version>1.2.3</logback.version>
@@ -168,6 +169,11 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-jcache</artifactId>
             <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
 
         <!--http://hibernate.org/validator/documentation/getting-started/#unified-expression-language-el-->
