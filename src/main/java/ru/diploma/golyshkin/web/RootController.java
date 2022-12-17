@@ -21,10 +21,10 @@ public class RootController {
         product1.setRanking(5.0);
         product1.setPhotoUrl("123");
         Product product2 = new Product();
-        product1.setId(1L);
-        product1.setName("product1");
-        product1.setRanking(5.0);
-        product1.setPhotoUrl("123");
+        product2.setId(1L);
+        product2.setName("product1");
+        product2.setRanking(5.0);
+        product2.setPhotoUrl("123");
         model.addAttribute("products", Arrays.asList(product1, product2));
         return "index";
     }
