@@ -11,9 +11,11 @@
     <script type="text/javascript" src="webjars/noty/3.1.4/lib/noty.min.js" defer></script>
     <script type="text/javascript" src="webjars/datetimepicker/2.5.20/build/jquery.datetimepicker.full.min.js" defer></script>
 </head>
+<html class="light">
 <body>
 
 <jsp:include page="product/menu.jsp"/>
 <jsp:include page="product/product.jsp"/>
 
 </body>
+</html>
