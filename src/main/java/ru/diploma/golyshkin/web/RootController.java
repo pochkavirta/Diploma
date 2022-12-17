@@ -13,12 +13,6 @@ public class RootController {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String login() {
-        System.out.println("============= 2===================");
-        return "login";
-    }
-
     @GetMapping("/marketplace")
     public String marketplace() {
         return "index";
