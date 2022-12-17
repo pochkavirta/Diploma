@@ -10,8 +10,6 @@ import java.util.Arrays;
 
 @Controller
 public class RootController {
-    //TODO для логина добавить отдельный user контроллер в новой папке, по аналогии с JspFeedController
-
     @GetMapping("/")
     public String root(Model model) {
         System.out.println("===== ADD PRODUCTS ======");

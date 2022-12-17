@@ -80,5 +80,3 @@ CREATE TABLE services
 );
 
 --CREATE UNIQUE INDEX services_unique_idx ON services (user_id, name);
-
---TODO сделать еще 2 таблицы, services и services_category по аналогии с products и products_category +++

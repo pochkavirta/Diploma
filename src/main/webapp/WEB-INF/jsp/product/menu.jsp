@@ -11,7 +11,7 @@
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
                 <li><a href="user/login">Войти</a></li>
-                <li><a href="#about">Регистрация</a></li>
+                <li><a href="user/registration">Регистрация</a></li>
                 <li><a href="#careers">Корзина</a></li>
                 <li><a href="#contact">Заказы</a></li>
             </ul>

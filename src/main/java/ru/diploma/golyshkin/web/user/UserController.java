@@ -13,4 +13,9 @@ public class UserController {
         System.out.println("============= 2===================");
         return "user/userLogin";
     }
+    @GetMapping("/registration")
+    public String registration() {
+        System.out.println("============= 3===================");
+        return "user/userRegistration";
+    }
 }
