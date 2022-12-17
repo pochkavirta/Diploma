@@ -1,5 +1,8 @@
+.sub-header {
+    height: 58px;
+}
+
 .product-page {
-    display: inline;
-    position: relative;
+    display: block;
     z-index: 999;
 }
