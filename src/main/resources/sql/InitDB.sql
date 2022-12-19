@@ -5,9 +5,9 @@ DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS services_category;
 DROP TABLE IF EXISTS services;
 
---DROP SEQUENCE IF EXISTS global_seq;
+DROP SEQUENCE IF EXISTS global_seq;
 
---CREATE SEQUENCE global_seq START 100000;
+CREATE SEQUENCE global_seq START 100000;
 
 CREATE TABLE user_roles
 (
@@ -24,9 +24,10 @@ CREATE TABLE users
     email      varchar(32)             NOT NULL,
     phone      char(12)                NOT NULL,
     password   varchar(16)             NOT NULL,
-    registered timestamp DEFAULT now() NOT NULL,
+    registered timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
     enabled    BOOLEAN   DEFAULT TRUE  NOT NULL,
-    user_role  int                     NOT NULL
+    user_role  int                     NOT NULL,
+    photo      bytea
 --    FOREIGN KEY (user_role) REFERENCES user_roles (user_roles_id) ON DELETE CASCADE
 );
 --CREATE UNIQUE INDEX users_unique_emails_idx ON users (email);
@@ -46,7 +47,7 @@ CREATE TABLE products
     description          varchar(256)            NOT NULL,
     price                int                     NOT NULL,
     ranking              int                     NOT NULL,
-    registered           timestamp DEFAULT now() NOT NULL,
+    registered           timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
     enabled              BOOLEAN   DEFAULT TRUE  NOT NULL,
     photoURL             text,
     products_category_id int                     NOT NULL
@@ -71,7 +72,7 @@ CREATE TABLE services
     description          varchar(256)            NOT NULL,
     price                int                     NOT NULL,
     ranking              int                     NOT NULL,
-    registered           timestamp DEFAULT now() NOT NULL,
+    registered           timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
     enabled              BOOLEAN   DEFAULT TRUE  NOT NULL,
     photoURL             text,
     services_category_id int                     NOT NULL
