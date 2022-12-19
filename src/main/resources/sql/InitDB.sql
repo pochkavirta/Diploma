@@ -45,12 +45,13 @@ CREATE TABLE products
     user_id              int                     NOT NULL,
     name                 varchar(64)             NOT NULL,
     description          varchar(256)            NOT NULL,
-    price                int                     NOT NULL,
+    price                decimal                     NOT NULL,
     ranking              int                     NOT NULL,
     registered           timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
     enabled              BOOLEAN   DEFAULT TRUE  NOT NULL,
-    photoURL             text,
-    products_category_id int                     NOT NULL
+    products_category_id int                     NOT NULL,
+    photo             bytea
+
 --   CONSTRAINT FK_1 FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
 --   CONSTRAINT FK_2 FOREIGN KEY (products_category_id) REFERENCES users (id) ON DELETE CASCADE
 );
@@ -74,7 +75,7 @@ CREATE TABLE services
     ranking              int                     NOT NULL,
     registered           timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
     enabled              BOOLEAN   DEFAULT TRUE  NOT NULL,
-    photoURL             text,
+    photo             bytea,
     services_category_id int                     NOT NULL
     --   CONSTRAINT FK_1 FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
     --   CONSTRAINT FK_2 FOREIGN KEY (services_category_id) REFERENCES users (id) ON DELETE CASCADE
