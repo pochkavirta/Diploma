@@ -5,25 +5,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.diploma.golyshkin.model.Product;
+import ru.diploma.golyshkin.service.ProductService;
 
 import java.util.Arrays;
 
 @Controller
 public class RootController {
+    private ProductService productService;
+
     @GetMapping("/")
     public String root(Model model) {
-        System.out.println("===== ADD PRODUCTS ======");
-        Product product1 = new Product();
-        product1.setId(1L);
-        product1.setName("product1");
-        product1.setRanking(5.0);
-        product1.setPhotoUrl("123");
-        Product product2 = new Product();
-        product2.setId(1L);
-        product2.setName("product1");
-        product2.setRanking(5.0);
-        product2.setPhotoUrl("123");
-        model.addAttribute("products", Arrays.asList(product1, product2));
+        model.addAttribute("products", productService.findAllProducts());
         return "index";
     }
 }
