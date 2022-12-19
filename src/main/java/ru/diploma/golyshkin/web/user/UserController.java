@@ -30,7 +30,7 @@ public class UserController {
     public String createUser(User user) {
         userService.createUser(user);
         //TODO подумать куда отправлять после регистрации. Предгалаю на главную страницу и там типо уже залогинен
-        //TODO СЛОЖНО добавить окогко с успешной регистрации
+        //TODO СЛОЖНО добавить окошко с успешной регистрации
         return "userRegistration";
     }
 }

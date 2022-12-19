@@ -1,6 +1,7 @@
 package ru.diploma.golyshkin.model;
 
 import java.time.LocalDateTime;
+
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,5 +21,4 @@ public class User {
     private Boolean enabled;
     private Long userRole;
     private MultipartFile photo;
-
 }
