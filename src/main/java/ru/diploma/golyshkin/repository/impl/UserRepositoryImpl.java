@@ -43,4 +43,5 @@ public class UserRepositoryImpl implements UserRepository {
                 generatedKeyHolder, keyColumnNames);
         return Optional.ofNullable(generatedKeyHolder.getKey()).map(Number::longValue).orElse(-1L);
     }
+  //  private static final String UNIQUE_PASSWORD_AND_EMAIL = "SELECT users_id FROM users WHERE email = 'email' OR nickname = 'nickname'";
 }
