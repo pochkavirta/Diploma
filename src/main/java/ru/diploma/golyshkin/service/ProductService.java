@@ -6,5 +6,13 @@ import java.util.List;
 
 public interface ProductService {
 
-    public List<Product> findAllProducts();
+    List<Product> findAllProducts();
+
+    void addProduct(Product product, Long userId);
+
+    void updateProduct(Product product);
+
+    void deleteProductById(Long id);
+
+    void updateRanking(Long productId, Integer ranking);
 }

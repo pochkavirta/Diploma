@@ -21,11 +21,11 @@ public class ProductRowMapper implements RowMapper<Product> {
                     .setName(resultSet.getString("name"))
                     .setDescription(resultSet.getString("description"))
                     .setPrice(resultSet.getDouble("price"))
-                    .setRanking(resultSet.getInt("ranking"))
+                    .setRanking(resultSet.getDouble("ranking"))
                     .setRegisterDate(LocalDateTime.parse(resultSet.getString("registered")))
                     .setIsEnable(resultSet.getBoolean("enabled"))
                     .setCategory(resultSet.getString("category"))
-                    .setPhotoUrl(IOUtils.toString(resultSet.getClob("photo").getCharacterStream()));
+                    .setPhoto(IOUtils.toString(resultSet.getClob("photo").getCharacterStream()));
         } catch (Exception e) {
             throw new NotFoundException("Ошибка при получение Продуктов");
         }

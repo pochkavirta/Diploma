@@ -14,10 +14,11 @@ public class Product {
     private String nickName;
     private String name;
     private Double price;
-    private Integer ranking;
+    private Double ranking;
+    private Integer rankingCount;
     private String description;
     private LocalDateTime registerDate;
     private Boolean isEnable;
     private String category;
-    private String photoUrl;
+    private String photo;
 }
