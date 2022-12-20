@@ -34,7 +34,7 @@ CREATE TABLE users
 
 CREATE TABLE products_category
 (
-    products_category_id int NOT NULL,
+    products_category_id int PRIMARY KEY,
     category             varchar(64)
 --    CONSTRAINT products_category_idx UNIQUE (id, category)
 );
