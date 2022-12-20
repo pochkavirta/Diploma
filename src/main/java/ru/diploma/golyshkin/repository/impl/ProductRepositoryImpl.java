@@ -33,7 +33,8 @@ public class ProductRepositoryImpl implements ProductRepository {
             + " products_category_id = (SELECT products_category_id FROM products_category WHERE category = :category)"
             + " WHERE products_id =:productId";
 
-    private static final String UPDATE_RANKING = "UPDATE products SET ranking = :ranking WHERE products_id =:productId";
+    private static final String UPDATE_RANKING = "UPDATE products SET ranking = :ranking, ranking_count = ranking_count + 1"
+            + " WHERE products_id =:productId";
 
     @Override
     public List<Product> findAllProducts() {
