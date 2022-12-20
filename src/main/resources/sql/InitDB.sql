@@ -76,8 +76,7 @@ CREATE TABLE services
     ranking              int       DEFAULT 0,
     registered           timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
     enabled              BOOLEAN   DEFAULT TRUE              NOT NULL,
-    photo                bytea,
-    services_category_id int                                 NOT NULL
+    photo                bytea
     --   CONSTRAINT FK_1 FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
     --   CONSTRAINT FK_2 FOREIGN KEY (services_category_id) REFERENCES users (id) ON DELETE CASCADE
 );
